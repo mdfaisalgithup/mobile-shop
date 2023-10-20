@@ -25,7 +25,7 @@ const brandName = form.brandName.value;
 const updateData = {name, select, price, imageLink, rating, shortDes, brandName}
 
 
-fetch(`https://backend-khaki-one.vercel.app/update/${_id}`, {
+fetch(`https://server-project-ashy.vercel.app/update/${_id}`, {
 
 headers: {"Content-Type" : "application/json"},
 method: "PUT",

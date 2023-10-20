@@ -12,7 +12,7 @@ const mycard = (data) => {
   const JsonData = JSON.stringify(data)
 
 
-fetch("https://backend-khaki-one.vercel.app/addmycard", {
+fetch("https://server-project-ashy.vercel.app/addmycard", {
 
   headers: {"Content-Type": "application/json"},
   method: "POST",

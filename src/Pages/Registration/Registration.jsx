@@ -64,7 +64,7 @@ Swal.fire('Successfully Registration')
    const userR = {email, password}
    console.log(userR)
     
-  fetch("https://backend-khaki-one.vercel.app/register", {
+  fetch("https://server-project-ashy.vercel.app/register", {
     headers: {"content-type": "application/json"},
     method: "POST",
     body: JSON.stringify(userR)

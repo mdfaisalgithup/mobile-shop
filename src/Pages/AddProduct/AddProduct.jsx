@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 
 
 const AddProduct = () => {
@@ -23,8 +25,15 @@ const addProducts = {
 }
 
  
+if(!name || !price || !price || !catagory || !imageLink || !brandName || !rating || !shortDes){
 
-fetch('https://backend-khaki-one.vercel.app/addprouct', {
+    Swal.fire("You have not provided any information") 
+    return
+}
+
+
+
+fetch('https://server-project-ashy.vercel.app/addprouct', {
 headers: {
     'content-type' : 'application/json'
 },
@@ -34,7 +43,7 @@ body: JSON.stringify(addProducts)
 
 })
 .then(res => res.json())
-.then(() => alert("sussfully Add Product"))
+.then(() => Swal.fire("Add Product Successfully") )
 form.reset()
 
     }

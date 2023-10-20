@@ -8,7 +8,7 @@ const Home = () => {
 const [dataStore, setStore] = useState([])
 const AllProduct = useLoaderData()
 
-fetch("https://backend-khaki-one.vercel.app/catagory/headphone")
+fetch("https://server-project-ashy.vercel.app/catagory/headphone")
 .then(res => res.json())
 .then(result => setStore(result))
 

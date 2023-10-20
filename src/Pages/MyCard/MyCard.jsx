@@ -9,7 +9,7 @@ let totalPrice = 0;
 const deleteBtn = (id) => {
 
 
-fetch(`https://backend-khaki-one.vercel.app/delete/${id}`, {
+fetch(`https://server-project-ashy.vercel.app/delete/${id}`, {
 
 method: "DELETE"
 
