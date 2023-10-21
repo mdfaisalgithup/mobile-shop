@@ -1,34 +1,19 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
-import SimpleImageSlider from "react-simple-image-slider";
+// import SimpleImageSlider from "react-simple-image-slider";
 
 const BrandName = () => {
 const singleProduct = useLoaderData();
 
 
 
-const images = [
-  { url: "https://www.mobiledokan.com/wp-content/uploads/2023/01/Oppo-A77s.jpg.webp" },
-  { url: "https://www.mobiledokan.com/wp-content/uploads/2023/09/Oppo-A58-4G-black.webp"}, 
-  { url: "https://www.mobiledokan.com/wp-content/uploads/2022/12/Oppo-A17K.jpg.webp"},
 
-
-];
 
 
     return (
 
       <>
 
-<div className="flex justify-center">
-      <SimpleImageSlider
-        width={"80%"}
-        height={"600px"}
-        images={images}
-        showBullets={true}
-        showNavs={true}
-      />
-    </div>
 
         <div className="lg:mx-[150px] xl:mx-[240px] md:mx-[100px] mx-[10px] my-10">
 
@@ -40,10 +25,10 @@ const images = [
 
                 return(
                     <> 
-     <div className="border-[1px] rounded-md">  
-     <div key={idx}>  
+     <div className="border-[1px] rounded-md"> 
 
-      <img className="rounded-md" src={sees?.imageLink} alt="" /> 
+     <div key={idx}>  
+<img className="rounded-md h-[250px] mx-auto" src={sees?.imageLink} alt="" /> 
 
 <div className="m-3">
       <h2><span className="font-bold">Brand:</span> {sees?.brandName}</h2> 
@@ -55,10 +40,12 @@ const images = [
     <h2><span className="font-bold">Name:</span> {sees?.name}</h2>
     <h2><span className="font-bold">Price:</span> {sees?.price}</h2>
 
+
    <div className="flex gap-x-5 justify-between my-2">
    <Link to={`/singles/${sees._id}`}><button className="bg-[#FED700] rounded-md hover:bg-[#f39c12] px-4 py-2 font-bold w-full">Details</button></Link>
    <Link to={`/update/${sees._id}`}><button className="bg-[#FED700] rounded-md hover:bg-[#f39c12] px-4 py-2 font-bold w-full">Update</button></Link>
    </div>
+
     
     </div>
 </div>
