@@ -26,7 +26,7 @@ const brandName = form.brandName.value;
 const updateData = {name, select, price, imageLink, rating, shortDes, brandName}
 
 
-fetch(`http://localhost:5000/update/${_id}`, {
+fetch(`https://server-site-black-three.vercel.app/update/${_id}`, {
 
 headers: {"Content-Type" : "application/json"},
 method: "PUT",

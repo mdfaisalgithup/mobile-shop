@@ -13,7 +13,7 @@ const mycard = (data) => {
   const JsonData = JSON.stringify(data)
 
 
-fetch("http://localhost:5000/addmycard", {
+fetch("hhttps://server-site-black-three.vercel.app/addmycard", {
 
   headers: {"Content-Type": "application/json"},
   method: "POST",

@@ -32,7 +32,7 @@ if(!name || !price || !price || !catagory || !imageLink || !brandName || !rating
 
 
 
-fetch('http://localhost:5000/addprouct', {
+fetch('https://server-site-black-three.vercel.app/addprouct', {
 headers: {
     'content-type' : 'application/json'
 },
@@ -75,9 +75,6 @@ form.reset()
 <div>
 <input className="border-[1px] border-[#FED700] rounded-md w-full py-4 mt-5 px-2 outline-none" type="text" name="imageLink" placeholder="Image Link" id="" />
 <input className="border-[1px] border-[#FED700] rounded-md w-full py-4 mt-5 px-2 outline-none" type="text" name="brandName" placeholder="Brand Name" id="" />
-<input className="border-[1px] border-[#FED700] rounded-md w-full py-4 mt-5 px-2 outline-none" type="text" placeholder="Rating" name="rating" id="" />
-
-
 <input className="border-[1px] border-[#FED700] rounded-md w-full py-4 mt-5 px-2 outline-none" type="text" placeholder="Rating" name="rating" id="" />
 
 </div>

@@ -70,7 +70,7 @@ Swal.fire('Registration Successfully')
    const userR = {email, password}
    console.log(userR)
     
-  fetch("http://localhost:5000/register", {
+  fetch("https://server-site-black-three.vercel.app/register", {
     headers: {"content-type": "application/json"},
     method: "POST",
     body: JSON.stringify(userR)

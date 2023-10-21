@@ -9,7 +9,7 @@ let totalPrice = 0;
 const deleteBtn = (id) => {
 
 
-fetch(`http://localhost:5000/delete/${id}`, {
+fetch(`https://server-site-black-three.vercel.app/delete/${id}`, {
 
 method: "DELETE"
 

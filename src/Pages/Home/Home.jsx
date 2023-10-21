@@ -10,7 +10,7 @@ const Home = () => {
 const [dataStore, setStore] = useState([])
 const AllProduct = useLoaderData()
 
-fetch("http://localhost:5000/catagory/headphone")
+fetch("https://server-site-black-three.vercel.app/catagory/headphone")
 .then(res => res.json())
 .then(result => setStore(result))
 
