@@ -43,13 +43,19 @@ if(password.length < 6){
   
 }
 
+const pattern = /[A-Z]/
+if(!pattern.test(password)){
 
+ Swal.fire('Please type in capital letters')
+ return
+  
+}
 
 
 
     createUser(email, password)
     .then(() => {
-Swal.fire('Successfully Registration')
+Swal.fire('Registration Successfully')
 
    updateProfile(auth.currentUser, {
 
@@ -64,7 +70,7 @@ Swal.fire('Successfully Registration')
    const userR = {email, password}
    console.log(userR)
     
-  fetch("https://server-project-ashy.vercel.app/register", {
+  fetch("http://localhost:5000/register", {
     headers: {"content-type": "application/json"},
     method: "POST",
     body: JSON.stringify(userR)

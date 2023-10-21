@@ -15,9 +15,9 @@ const Footer = () => {
             <div>
         
 
-            <div><Link className="text-[#afafaf] hover:underline font-bold" to="http://localhost:5173/brand/oppo">Oppo</Link></div>
-              <div><Link className="text-[#afafaf] hover:underline font-bold" to="http://localhost:5173/brand/xiaomi">Xiaomi</Link></div>
-              <div><Link className="text-[#afafaf] hover:underline font-bold" to="http://localhost:5173/brand/edifier">Edifier</Link></div>
+            <div><Link className="text-[#afafaf] hover:underline font-bold" to="https://server-site-black-three.vercel.app/brand/oppo">Oppo</Link></div>
+              <div><Link className="text-[#afafaf] hover:underline font-bold" to="https://server-site-black-three.vercel.app/brand/xiaomi">Xiaomi</Link></div>
+              <div><Link className="text-[#afafaf] hover:underline font-bold" to="https://server-site-black-three.vercel.app/brand/edifier">Edifier</Link></div>
             </div>
       </div>
       

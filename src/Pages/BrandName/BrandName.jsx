@@ -32,8 +32,8 @@ console.log(singleProduct)
     <h2><span className="font-bold">Price:</span> {sees?.price}</h2>
 
    <div className="flex gap-x-5 justify-between my-2">
-   <Link to={`/singles/${sees.id}`}><button className="bg-[#FED700] rounded-md hover:bg-[#f39c12] px-4 py-2 font-bold w-full">Details</button></Link>
-   <Link to={`/update/${sees.id}`}><button className="bg-[#FED700] rounded-md hover:bg-[#f39c12] px-4 py-2 font-bold w-full">Update</button></Link>
+   <Link to={`/singles/${sees._id}`}><button className="bg-[#FED700] rounded-md hover:bg-[#f39c12] px-4 py-2 font-bold w-full">Details</button></Link>
+   <Link to={`/update/${sees._id}`}><button className="bg-[#FED700] rounded-md hover:bg-[#f39c12] px-4 py-2 font-bold w-full">Update</button></Link>
    </div>
     
     </div>

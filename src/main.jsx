@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('https://server-project-ashy.vercel.app/addprouct')
+        loader: () => fetch('http://localhost:5000/addprouct')
        },
        {
         path: "/shop",
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
        {
         path: "/mycard",
         element: <PrivateRoute><MyCard></MyCard></PrivateRoute> ,
-        loader: () => fetch('https://server-project-ashy.vercel.app/mycardall')
+        loader: () => fetch('http://localhost:5000/mycardall')
        },
        {
         path: "/login",
@@ -63,17 +63,17 @@ const router = createBrowserRouter([
        {
         path: "/brand/:id",
         element: <PrivateRoute><BrandName></BrandName></PrivateRoute>,
-        loader: ({params}) => fetch(`https://server-project-ashy.vercel.app/brand/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/brand/${params.id}`)
        },
        {
         path: "/singles/:id",
         element: <PrivateRoute><SinglePage></SinglePage></PrivateRoute>,
-        loader: ({params}) => fetch(`https://server-project-ashy.vercel.app/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/singles/${params.id}`)
        },
        {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({params}) => fetch(`https://server-project-ashy.vercel.app/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/update/${params.id}`)
        }
       
   

@@ -1,6 +1,8 @@
 # Mobile Shop
 
-- User-Friendly Login Portal: Access our product with ease through a simple and intuitive login interface designed for your convenience.
+- JSON APIs: Easily create JSON-based APIs for data exchange, ideal for mobile apps and external services.
+
+Middleware Ecosystem: The vast selection of middleware options lets you add features and functionality effortlessly.
 
 - Secure Access Point: Your gateway to a secure and reliable product experience. Rest assured, your data is in safe hands.
 

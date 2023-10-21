@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Update = () => {
 
@@ -25,7 +26,7 @@ const brandName = form.brandName.value;
 const updateData = {name, select, price, imageLink, rating, shortDes, brandName}
 
 
-fetch(`https://server-project-ashy.vercel.app/update/${_id}`, {
+fetch(`http://localhost:5000/update/${_id}`, {
 
 headers: {"Content-Type" : "application/json"},
 method: "PUT",
@@ -34,26 +35,19 @@ body: JSON.stringify(updateData)
 .then(res => res.json())
 .then(result => {
 
-    if(result.modifiedCount > 0) {alert("Successfully Updated")}
+    if(result.modifiedCount > 0) {Swal.fire('Updated Succesfully')}
 
 })
 
 }
-
-
-
-
-
-
-
     return (
         <div>
           
-<div className="w-1/2 mx-auto bg-orange-100 p-8 m-5 shadow-xl rounded-md">
+<div className="lg:w-1/2 xl:w-1/2 w-[90%] mx-auto bg-orange-100 p-8 m-5 shadow-xl rounded-md">
 <h2 className="text-[20px] text-center">Update</h2>
 <form onSubmit={handleAddUpdate}>
 
-<div className="flex gap-5">  
+<div className="flex xl:flex-row lg:flex-row flex-col gap-5">  
 
 <div>
 <input className="border-[1px] border-[#FED700] rounded-md w-full py-4 mt-5 px-2 outline-none" type="text" defaultValue ={name} name="name" placeholder="Name" id="" />
@@ -61,9 +55,11 @@ body: JSON.stringify(updateData)
 
 <select className="border-[1px] border-[#FED700] rounded-md w-full py-4 mt-5 px-2 outline-none" name="select">
 
-<option value="phone">{catagory}</option>
+<option value={catagory && catagory}>{catagory && catagory}</option>
+
 <option value="computer">Computer</option>
 <option value="headphone">HeadePhone</option>
+<option value="phone">Phone</option>
 </select>
 
 

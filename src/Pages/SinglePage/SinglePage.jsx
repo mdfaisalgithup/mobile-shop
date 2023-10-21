@@ -2,6 +2,7 @@
 
 import { AiFillStar } from "react-icons/ai";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const SinglePage = () => {
@@ -12,7 +13,7 @@ const mycard = (data) => {
   const JsonData = JSON.stringify(data)
 
 
-fetch("https://server-project-ashy.vercel.app/addmycard", {
+fetch("http://localhost:5000/addmycard", {
 
   headers: {"Content-Type": "application/json"},
   method: "POST",
@@ -21,7 +22,7 @@ fetch("https://server-project-ashy.vercel.app/addmycard", {
 .then(res => res.json())
 .then(d => console.log(d))
 
-alert("add Successfully")
+Swal.fire("added Card Successfully")
 
 }
 

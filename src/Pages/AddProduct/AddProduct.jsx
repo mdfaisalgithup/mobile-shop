@@ -18,9 +18,8 @@ const brandName = form.brandName.value;
 const rating = form.rating.value;
 const shortDes = form.shortDes.value;
 
-const id = Math.floor(Math.random() * 1234567890).toString();
 const addProducts = {
-    name, price, catagory, imageLink, brandName, rating, id, shortDes
+    name, price, catagory, imageLink, brandName, rating, shortDes
 
 }
 
@@ -33,7 +32,7 @@ if(!name || !price || !price || !catagory || !imageLink || !brandName || !rating
 
 
 
-fetch('https://server-project-ashy.vercel.app/addprouct', {
+fetch('http://localhost:5000/addprouct', {
 headers: {
     'content-type' : 'application/json'
 },
@@ -77,6 +76,10 @@ form.reset()
 <input className="border-[1px] border-[#FED700] rounded-md w-full py-4 mt-5 px-2 outline-none" type="text" name="imageLink" placeholder="Image Link" id="" />
 <input className="border-[1px] border-[#FED700] rounded-md w-full py-4 mt-5 px-2 outline-none" type="text" name="brandName" placeholder="Brand Name" id="" />
 <input className="border-[1px] border-[#FED700] rounded-md w-full py-4 mt-5 px-2 outline-none" type="text" placeholder="Rating" name="rating" id="" />
+
+
+<input className="border-[1px] border-[#FED700] rounded-md w-full py-4 mt-5 px-2 outline-none" type="text" placeholder="Rating" name="rating" id="" />
+
 </div>
 
 </div> 

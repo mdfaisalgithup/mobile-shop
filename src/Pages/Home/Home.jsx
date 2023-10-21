@@ -8,7 +8,7 @@ const Home = () => {
 const [dataStore, setStore] = useState([])
 const AllProduct = useLoaderData()
 
-fetch("https://server-project-ashy.vercel.app/catagory/headphone")
+fetch("http://localhost:5000/catagory/headphone")
 .then(res => res.json())
 .then(result => setStore(result))
 
@@ -77,7 +77,7 @@ fetch("https://server-project-ashy.vercel.app/catagory/headphone")
         <h2><span className="font-bold">Price: </span> {shows?.price} BDT</h2>
         </div>
         </div>
-        <Link to={`singles/${shows.id}`}><button className="bg-[#FED700] rounded-b-md hover:bg-[#f39c12] px-4 py-2 font-bold w-full">Details</button></Link>
+        <Link to={`singles/${shows?._id}`}><button className="bg-[#FED700] rounded-b-md hover:bg-[#f39c12] px-4 py-2 font-bold w-full">Details</button></Link>
         </div>
       </div>
 </>
@@ -138,13 +138,9 @@ fetch("https://server-project-ashy.vercel.app/catagory/headphone")
 <div>
 <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
 
-
 {
 
 dataStore?.map((headphone) => {
-
-
-
     return (
 
      <>
@@ -156,7 +152,7 @@ dataStore?.map((headphone) => {
      <h2><span className="font-bold">Name:</span> {headphone?.name.split(" ").slice(0, 3) + ""} </h2>
      <h2 className="cursor-pointer 0"><span className="font-bold">Brand Name: </span> 
      <Link to={`/brand/${headphone?.brandName}`}><span className="hover:text-blue-500">{headphone?.brandName}</span></Link>
-        </h2>
+   </h2>
 
      <div className="flex items-center">
      <h2><span className="font-bold">Rating:</span> <span className="text-[12px]">{headphone?.rating}</span> </h2> /<AiFillStar className="text-orange-300"></AiFillStar>
@@ -166,7 +162,7 @@ dataStore?.map((headphone) => {
      <h2><span className="font-bold">Price: </span> {headphone?.price} BDT</h2>
      </div>
      </div>
-     <Link to={`singles/${headphone.id}`}><button className="bg-[#FED700] rounded-b-md hover:bg-[#f39c12] px-4 py-2 font-bold w-full">Details</button></Link>
+     <Link to={`singles/${headphone?._id}`}><button className="bg-[#FED700] rounded-b-md hover:bg-[#f39c12] px-4 py-2 font-bold w-full">Details</button></Link>
      </div>
    </div>
 </>
@@ -179,6 +175,11 @@ dataStore?.map((headphone) => {
 }
 </div>
 </div>
+</div>
+
+<div className="mx-[240px]">
+
+
 
 
 </div>
@@ -210,6 +211,14 @@ dataStore?.map((headphone) => {
 </div>
 
 </div>
+
+
+
+
+
+
+
+
 
  </>
  )

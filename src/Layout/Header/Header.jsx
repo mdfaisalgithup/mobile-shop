@@ -28,7 +28,7 @@ const singOuts = () => {
 
 <div className="flex xl:flex-row lg:flex-row flex-col xl:items-center lg:items-center xl:justify-between lg:justify-between">
       <div>
-    <img className="xl:w-[150px] lg:w-[150px] md:w-[200px] w-[250px]" src="../../../public/image/logo.webp" alt="" />
+    <img className="xl:w-[150px] lg:w-[150px] md:w-[200px] w-[250px]" src="https://i.ibb.co/ZhXkMq8/logo.webp" alt="" />
     </div>
             
             <div className="xl:space-x-12 lg:space-x-12 md:space-x-12 space-x-2 text-center">

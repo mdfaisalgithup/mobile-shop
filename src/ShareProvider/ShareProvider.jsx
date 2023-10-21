@@ -10,17 +10,17 @@ const ShareProvider = ({children}) => {
   
 
 const [user, setUser] = useState(null);
-const [loading, setLoading] = useState(true);
+
 
 
 const createUser = (email, password) => {
-    setLoading(true)
+
 return createUserWithEmailAndPassword(auth, email, password)
 }
 
 
 const signUser = (email, password) => { 
-    setLoading(true)
+
     return signInWithEmailAndPassword(auth, email, password)
    
 }
@@ -29,15 +29,16 @@ const signUser = (email, password) => {
 useEffect(() => {
 const unSubscribe = onAuthStateChanged(auth, (userOnline) => {
     setUser(userOnline);
-    setLoading(true)
+
 })
 return () => unSubscribe();
 
 }, [])
 
 
+
 const singOut = () => {
-    setLoading(false)
+ 
     return signOut(auth)
 }
 
@@ -48,7 +49,6 @@ const singOut = () => {
 
     const allData = {
         user,
-        loading,
         createUser,
         signUser,
         singOut,
