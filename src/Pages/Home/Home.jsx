@@ -5,6 +5,8 @@ import { BsPersonCircle } from "react-icons/bs";
 
 
 const Home = () => {
+
+   
 const [dataStore, setStore] = useState([])
 const AllProduct = useLoaderData()
 
@@ -179,13 +181,31 @@ dataStore?.map((headphone) => {
 
 <div className="mx-[240px]">
 
+<div className="my-10">
+<h2 className="font-bold text-center my-4">Top Brands</h2>
 
+<div className="flex justify-center gap-5">
+
+<img className="w-[7%] shadow-xl rounded-full" src="https://i.ibb.co/1r3NWyp/download.png" alt="" />
+
+<img className="w-[7%] shadow-xl  rounded-full" src="https://i.ibb.co/QbDhtK9/download.png" alt="" />
+
+<img className="w-[7%] shadow-xl  rounded-full" src="https://i.ibb.co/YbzsZbz/download.png" alt="" />
+
+<img className="w-[7%] shadow-xl  rounded-full" src="https://i.ibb.co/pxrn7QW/download.png" alt="" />
+</div>
+</div>
 
 
 </div>
 
 
-<div className="xl:mx-[240px] lg:mx-[100px] mx-[10px] my-2 ">
+
+
+
+
+
+<div className="xl:mx-[240px] lg:mx-[100px] mx-[10px] my-6 ">
 
 <div className="flex justify-between xl:flex-row lg:flex-row flex-col gap-6 ">
 

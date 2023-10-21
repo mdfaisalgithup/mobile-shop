@@ -13,6 +13,7 @@ const [user, setUser] = useState(null);
 
 
 
+
 const createUser = (email, password) => {
 
 return createUserWithEmailAndPassword(auth, email, password)
@@ -38,7 +39,7 @@ return () => unSubscribe();
 
 
 const singOut = () => {
- 
+
     return signOut(auth)
 }
 
@@ -52,6 +53,7 @@ const singOut = () => {
         createUser,
         signUser,
         singOut,
+
 
 
     }
