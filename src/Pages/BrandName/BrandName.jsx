@@ -1,13 +1,37 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
+import SimpleImageSlider from "react-simple-image-slider";
 
 const BrandName = () => {
 const singleProduct = useLoaderData();
 
-console.log(singleProduct)
+
+
+const images = [
+  { url: "https://www.mobiledokan.com/wp-content/uploads/2023/01/Oppo-A77s.jpg.webp" },
+  { url: "https://www.mobiledokan.com/wp-content/uploads/2023/09/Oppo-A58-4G-black.webp"}, 
+  { url: "https://www.mobiledokan.com/wp-content/uploads/2022/12/Oppo-A17K.jpg.webp"},
+
+
+];
+
 
     return (
+
+      <>
+
+<div className="flex justify-center">
+      <SimpleImageSlider
+        width={"80%"}
+        height={"600px"}
+        images={images}
+        showBullets={true}
+        showNavs={true}
+      />
+    </div>
+
         <div className="lg:mx-[150px] xl:mx-[240px] md:mx-[100px] mx-[10px] my-10">
+
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
 
           {
@@ -49,7 +73,7 @@ console.log(singleProduct)
           }
 
         </div>  
-    </div>
+    </div></>
     )
 };
 
