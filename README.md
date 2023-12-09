@@ -25,4 +25,4 @@ Middleware Ecosystem: The vast selection of middleware options lets you add feat
 
 
 #### Technology use:
-- Html, css Javascript, React, Express Monogodb 
+- Html, css, Tailwind, Javascript, React, React Router, Express, Monogodb
